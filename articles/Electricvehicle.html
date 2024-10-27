@@ -3,68 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Article Title</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>CAN Bus Optimization for Electric Vehicle Systems</title>
     <style>
         body {
-            font-family: 'Merriweather', serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
+            font-family: 'Georgia', serif;
+            background: #fafafa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
             color: #333;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1, h2, h3 {
-            margin: 20px 0;
-        }
-        p {
-            margin: 10px 0;
-        }
-        .article-title {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 10px;
+        header h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+            color: #888;
         }
         .author {
-            color: #888;
-            margin-bottom: 20px;
+            font-size: 1em;
+            color: #666;
+            margin-top: 10px;
         }
-        .content img {
-            max-width: 100%;
-            height: auto;
+        article img {
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        article p {
+            font-size: 1.125em;
             margin: 20px 0;
         }
-        .back-link {
-            display: block;
-            margin-top: 20px;
+        article h3 {
+            font-size: 1.5em;
+            margin: 40px 0 20px;
+            font-weight: bold;
+            color: #444;
+        }
+        .quote {
+            border-left: 4px solid #f34242;
+            padding-left: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+        a {
+            color: #f34242;
             text-decoration: none;
-            color: #333;
-            background: #ddd;
-            padding: 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+            padding-top: 20px;
             text-align: center;
-            border-radius: 5px;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="article-title">Your Article Title Here</h1>
-        <p class="author">by Mohammed | Date</p>
-        <div class="content">
-            <p>Your introduction goes here. This is a great place to summarize the article or highlight key points.</p>
-            <h2>Subheading 1</h2>
-            <p>Your article content goes here. Write as much or as little as you need to convey your message.</p>
-            <img src="image-link.jpg" alt="Descriptive Image Text">
-            <h2>Subheading 2</h2>
-            <p>Continue with more content, images, code snippets, etc.</p>
+    <header>
+        <h1>CAN Bus Optimization and Monitoring for Electric Vehicle Systems</h1>
+        <h2>Enhancing Communication and Performance in Modern EVs</h2>
+        <div class="author">By Mohammed Luthfi - October 27, 2024</div>
+    </header>
+    <article>
+        <p>In the rapidly evolving world of electric vehicles (EVs), optimizing communication between different vehicle components is crucial. One of the most important communication protocols in EVs is the CAN bus, which allows various microcontrollers and sensors to exchange data in real-time.</p>
+        
+        <img src="images/can_bus_ev.jpg" alt="CAN Bus in Electric Vehicle" />
+
+        <h3>Understanding CAN Bus Protocol</h3>
+        <p>The Controller Area Network (CAN) is a robust vehicle bus standard designed to allow microcontrollers and devices to communicate without a host computer. It is particularly well-suited for automotive applications, where reliability and fault tolerance are essential.</p>
+
+        <div class="quote">
+            "The reliability of the CAN bus protocol makes it the backbone of modern automotive communication."
         </div>
-        <a href="index.html" class="back-link">Back to Home</a>
+
+        <h3>Challenges in EV Systems</h3>
+        <p>Despite its robustness, optimizing CAN bus for EVs presents unique challenges. High-speed data transfer, noise interference, and power consumption are critical considerations. Addressing these issues can lead to improved vehicle performance and better user experience.</p>
+
+        <img src="images/can_bus_performance.png" alt="CAN Bus Performance Metrics" />
+
+        <h3>Optimizing CAN Bus for Better Performance</h3>
+        <p>To optimize CAN bus communication in EVs, developers can focus on techniques like reducing message size, increasing baud rates, and implementing advanced filtering. These strategies can significantly reduce latency and improve the overall efficiency of the vehicle's communication system.</p>
+        
+        <p>Furthermore, monitoring the CAN bus traffic in real-time helps detect anomalies early, preventing potential failures. Tools like <a href="https://example.com/can-bus-monitoring-tool">CAN bus analyzers</a> can be invaluable in this process.</p>
+
+        <h3>Conclusion</h3>
+        <p>As EVs continue to gain popularity, the role of efficient communication protocols like CAN bus will become even more critical. By implementing strategic optimizations and monitoring, developers can ensure that EV systems remain reliable, responsive, and efficient.</p>
+    </article>
+    <div class="footer">
+        © 2024 Mohammed Luthfi | <a href="/">Back to Portfolio</a>
     </div>
 </body>
 </html>
