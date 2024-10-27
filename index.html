@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-    <title>Mohammed Luthfi's Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Mohammed Luthfi's Portfolio</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
@@ -12,18 +12,54 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+        }
+        #sidebar {
+            width: 200px;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #f34242; /* Softer red */
+        }
+        #sidebar h2 {
+            margin-top: 0;
+        }
+        #sidebar ul {
+            padding: 0;
+        }
+        #sidebar ul li {
+            list-style-type: none;
+            margin: 10px 0;
+        }
+        #sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        #sidebar ul li a:hover {
+            background-color: #f34242; /* Softer red on hover */
+            color: white; /* Change text color on hover */
+        }
+        #main {
+            flex-grow: 1;
+            padding: 0; /* Ensure no padding */
+            margin: 0; /* Ensure no margin */
         }
         #header {
             display: flex;
-            flex-direction: column; /* Changed to column for proper alignment */
-            align-items: flex-start; /* Aligns items to the left */
-            padding: 20px;
-            background-color: white;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the start */
+            padding: 20px; /* Add padding for spacing */
+            border-bottom: 3px solid #f34242; /* Softer red */
+            width: 100%; /* Extend to full width */
+            text-align: left; /* Align text to the left */
         }
         #header h2 {
-            margin: 0;
-            font-size: 2em; /* Larger font size */
-            color: #333;
+            margin: 0; /* Remove margin */
+            font-size: 2em; /* Font size */
+            color: #333; /* Text color */
         }
         .content {
             padding: 20px;
@@ -34,112 +70,124 @@
             text-decoration: none;
         }
         .icons a:hover {
-            color: #e74c3c; /* Red color on hover */
+            color: #f34242; /* Softer red on hover */
+        }
+        .image img {
+            width: 50%; /* Adjust image size */
         }
     </style>
 </head>
 <body>
-<!-- Header -->
-<div id="header">
-    <h2 style="font-weight: bold;">Mohammed Luthfi</h2>
-</div>
-
-<!-- Main Content -->
-<div id="main">
-    <div class="inner">
-
-        <!-- Introduction -->
-        <section id="introduction">
-            <header class="major">
-                <h2>About Me</h2>
-            </header>
-            <p>Hello, I'm Mohammed Luthfi. I specialize in embedded systems development with a focus on real-time systems, communication protocols, and custom OS development for microcontrollers. My passion lies in understanding the intricacies of hardware-software interaction, and I strive to build efficient and reliable solutions.</p>
-        </section>
-
-        <!-- Work Experience -->
-        <section id="work-experience">
-            <header class="major">
-                <h2>Work Experience</h2>
-            </header>
-            <p>I have 1.3 years of experience in embedded development, including bare-metal programming for microcontrollers like dsPIC33CK256mp508. During this time, I have developed low-level drivers for ADC, PWM, UART, I2C, SPI, TIMER, and GPIO. My work also includes creating a driver for the DRV8305 motor driver and using it to control a BLDC motor. Additionally, I have experience in writing Linux kernel modules, custom OS development for Raspberry Pi, and implementing communication protocols like CAN FD and I2C.</p>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <header class="major">
-                <h2>My Projects</h2>
-            </header>
-            <div class="posts">
-                <article>
-                    <a href="https://mohammedluthfi10.github.io/Custom-OS-for-Raspberry-Pi-4-with-UART-and-GPIO-Support/" class="image">
-                        <img src="images/pic01.jpg" alt="Project 1" />
-                    </a>
-                    <h3>Custom OS for Raspberry Pi 4</h3>
-                    <p>Developed a custom OS with UART and GPIO support for Raspberry Pi 4.</p>
-                    <ul class="actions">
-                        <li><a href="https://mohammedluthfi10.github.io/Custom-OS-for-Raspberry-Pi-4-with-UART-and-GPIO-Support/" class="button">View Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <a href="https://mohammedluthfi10.github.io/Assembly-Based-Real-Time-Clock-Using-STM32F103/" class="image">
-                        <img src="images/pic02.jpg" alt="Project 2" />
-                    </a>
-                    <h3>Assembly Based Real-Time Clock</h3>
-                    <p>Implemented a real-time clock using assembly language on STM32F103.</p>
-                    <ul class="actions">
-                        <li><a href="https://mohammedluthfi10.github.io/Assembly-Based-Real-Time-Clock-Using-STM32F103/" class="button">View Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <a href="https://mohammedluthfi10.github.io/Custom-Linux-Kernel-Module-with-Device-Tree-Integration-on-Raspberry-Pi/" class="image">
-                        <img src="images/pic03.jpg" alt="Project 3" />
-                    </a>
-                    <h3>Linux Kernel Module for Raspberry Pi</h3>
-                    <p>Developed a Linux kernel module with device tree integration.</p>
-                    <ul class="actions">
-                        <li><a href="https://mohammedluthfi10.github.io/Custom-Linux-Kernel-Module-with-Device-Tree-Integration-on-Raspberry-Pi/" class="button">View Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <a href="https://mohammedluthfi10.github.io/Real-Time-Audio-Transmission-with-STM32-and-ESP32/" class="image">
-                        <img src="images/pic04.jpg" alt="Project 4" />
-                    </a>
-                    <h3>Real-Time Audio Transmission</h3>
-                    <p>Implemented real-time audio streaming between STM32 and ESP32.</p>
-                    <ul class="actions">
-                        <li><a href="https://mohammedluthfi10.github.io/Real-Time-Audio-Transmission-with-STM32-and-ESP32/" class="button">View Project</a></li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <header class="major">
-                <h2>Contact Me</h2>
-            </header>
-            <p>If you'd like to reach out for collaborations or opportunities, feel free to contact me via:</p>
-            <ul>
-                <li>Email: <a href="mailto:user@example.com">user@example.com</a></li>
-                <li>Mobile: +123-456-7890</li>
-                <li>
-                    Connect with me on:
-                    <div class="icons" style="display: inline;">
-                        <a href="#" class="icon brands fa-github"><span class="label">github</span></a>
-                        <a href="#" class="icon brands fa-linkedin"><span class="label">linkedin</span></a>
-                    </div>
-                </li>
-            </ul>
-        </section>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
-</div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <!-- Main Content -->
+    <div id="main">
+        <div class="inner">
+            <!-- Header -->
+            <div id="header">
+                <h2 style="font-weight: bold;">Mohammed Luthfi</h2>
+            </div>
 
-</body>
-</html>
+            <!-- Introduction -->
+            <section id="introduction">
+                <p>Hello, I'm Mohammed Luthfi. I specialize in embedded systems development with a focus on real-time systems, communication protocols, and custom OS development for microcontrollers. My passion lies in understanding the intricacies of hardware-software interaction, and I strive to build efficient and reliable solutions.</p>
+            </section>
+
+            <!-- Work Experience -->
+            <section id="work-experience">
+                <header class="major">
+                    <h2>Work Experience</h2>
+                </header>
+                <p>I have 1.3 years of experience in embedded development, including bare-metal programming for microcontrollers like dsPIC33CK256mp508. During this time, I have developed low-level drivers for ADC, PWM, UART, I2C, SPI, TIMER, and GPIO. My work also includes creating a driver for the DRV8305 motor driver and using it to control a BLDC motor. Additionally, I have experience in writing Linux kernel modules, custom OS development for Raspberry Pi, and implementing communication protocols like CAN FD and I2C.</p>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <header class="major">
+                    <h2>My Projects</h2>
+                </header>
+                <div class="posts">
+                    <article>
+                        <a href="https://mohammedluthfi10.github.io/Custom-OS-for-Raspberry-Pi-4-with-UART-and-GPIO-Support/" class="image">
+                            <img src="images/pic01.png" alt="Project 1" />
+                        </a>
+                        <h3>Custom OS for Raspberry Pi 4</h3>
+                        <p>Developed a custom OS with UART and GPIO support for Raspberry Pi 4.</p>
+                        <ul class="actions">
+                            <li><a href="https://mohammedluthfi10.github.io/Custom-OS-for-Raspberry-Pi-4-with-UART-and-GPIO-Support/" class="button">View Project</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <a href="https://mohammedluthfi10.github.io/Assembly-Based-Real-Time-Clock-Using-STM32F103/" class="image">
+                            <img src="images/pic02.png" alt="Project 2" />
+                        </a>
+                        <h3>Assembly Based Real-Time Clock</h3>
+                        <p>Implemented a real-time clock using assembly language on STM32F103.</p>
+                        <ul class="actions">
+                            <li><a href="https://mohammedluthfi10.github.io/Assembly-Based-Real-Time-Clock-Using-STM32F103/" class="button">View Project</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <a href="https://mohammedluthfi10.github.io/Custom-Linux-Kernel-Module-with-Device-Tree-Integration-on-Raspberry-Pi/" class="image">
+                            <img src="images/pic03.jpg" alt="Project 3" />
+                        </a>
+                        <h3>Linux Kernel Module for Raspberry Pi</h3>
+                        <p>Developed a Linux kernel module with device tree integration.</p>
+                        <ul class="actions">
+                            <li><a href="https://mohammedluthfi10.github.io/Custom-Linux-Kernel-Module-with-Device-Tree-Integration-on-Raspberry-Pi/" class="button">View Project</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <a href="https://mohammedluthfi10.github.io/Real-Time-Audio-Transmission-with-STM32-and-ESP32/" class="image">
+                            <img src="images/pic04.jpg" alt="Project 4" />
+                        </a>
+                        <h3>Real-Time Audio Transmission</h3>
+                        <p>Implemented real-time audio streaming between STM32 and ESP32.</p>
+                        <ul class="actions">
+                            <li><a href="https://mohammedluthfi10.github.io/Real-Time-Audio-Transmission-with-STM32-and-ESP32/" class="button">View Project</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+    
+
+            <!-- Articles Section -->
+            <section id="articles">
+                <header class="major">
+                    <h2>Articles</h2>
+                </header>
+                <div class="posts">
+                    <!-- Add your articles here -->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <header class="major">
+                    <h2>Contact Me</h2>
+                </header>
+                <p>If you'd like to reach out for collaborations or opportunities, feel free to contact me via:</p>
+                <ul>
+                    <li>Email: <a href="mailto:user@example.com">user@example.com</a></li>
+                    <li>Mobile: +123-456-7890</li>
+                    <li>
+                        Connect with me on:
+                        <div class="icons" style="display: inline;">
+                            <a href="#" class="icon brands fa-github"><span class="label">github</span></a>
+                            <a href="#" class="icon brands fa-linkedin"><span class="label">linkedin</span></a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    
