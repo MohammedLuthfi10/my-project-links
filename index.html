@@ -20,9 +20,38 @@
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
             border-left: 5px solid #f34242; /* Softer red */
+            transition: width 0.3s ease;
+            position: relative;
         }
-        #sidebar h2 {
-            margin-top: 0;
+        #sidebar.minimized {
+            width: 50px; /* Minimized width */
+        }
+        #sidebar h2, #sidebar ul {
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+        #sidebar.minimized h2, #sidebar.minimized ul {
+            opacity: 0; /* Hide text when minimized */
+        }
+        #toggle-sidebar {
+            position: absolute;
+    top: 20px;
+    right: -15px;
+    background: #060303;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Small square with slightly rounded edges */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px; /* Adjusted font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+        }
+        #toggle-sidebar.minimized {
+            transform: rotate(180deg);
         }
         #sidebar ul {
             padding: 0;
@@ -44,22 +73,26 @@
         }
         #main {
             flex-grow: 1;
-            padding: 0; /* Ensure no padding */
-            margin: 0; /* Ensure no margin */
+            padding: 0;
+            margin: 0;
+            transition: margin-left 0.3s ease;
+        }
+        #main.minimized {
+            margin-left: 50px; /* Adjust main content position when sidebar is minimized */
         }
         #header {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align items to the start */
-            padding: 20px; /* Add padding for spacing */
-            border-bottom: 3px solid #f34242; /* Softer red */
-            width: 100%; /* Extend to full width */
-            text-align: left; /* Align text to the left */
+            align-items: flex-start;
+            padding: 20px;
+            border-bottom: 3px solid #f34242;
+            width: 100%;
+            text-align: left;
         }
         #header h2 {
-            margin: 0; /* Remove margin */
-            font-size: 2em; /* Font size */
-            color: #333; /* Text color */
+            margin: 0;
+            font-size: 2em;
+            color: #333;
         }
         .content {
             padding: 20px;
@@ -70,16 +103,17 @@
             text-decoration: none;
         }
         .icons a:hover {
-            color: #f34242; /* Softer red on hover */
+            color: #f34242;
         }
         .image img {
-            width: 50%; /* Adjust image size */
+            width: 50%;
         }
     </style>
 </head>
 <body>
     <!-- Sidebar -->
     <div id="sidebar">
+        <button id="toggle-sidebar" onclick="toggleSidebar()"><</button>
         <h2>Menu</h2>
         <ul>
             <li><a href="#work-experience">Work Experience</a></li>
@@ -158,18 +192,7 @@
                     </article>
                 </div>
             </section>
-    
-
-            <!-- Articles Section -->
-            <section id="articles">
-                <header class="major">
-                    <h2>Articles</h2>
-                </header>
-                <div class="posts">
-                    <!-- Add your articles here -->
-                </div>
-            </section>
-
+        
             <!-- Contact Section -->
             <section id="contact">
                 <header class="major">
@@ -191,3 +214,15 @@
         </div>
     </div>
     
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var main = document.getElementById('main');
+            var button = document.getElementById('toggle-sidebar');
+            sidebar.classList.toggle('minimized');
+            main.classList.toggle('minimized');
+            button.textContent = sidebar.classList.contains('minimized') ? '>' : '<';
+        }
+    </script>
+</body>
+</html>
